@@ -113,59 +113,30 @@ function closeLightbox() {
 }
 
 // Handle contact form submission with styled message
-const contactForm = document.querySelector(".contact-form");
-const formMessage = document.getElementById("formMessage");
+const form = document.getElementById('contact-form');
+const formMessage = document.getElementById('formMessage');
+const submitButton = document.getElementById('submitButton');
 
-if (contactForm) {
-  contactForm.addEventListener("submit", async function (e) {
-    e.preventDefault();
+form.addEventListener('submit', async (event) => {
+  event.preventDefault();
+  submitButton.disabled = true;
+  formMessage.textContent = 'Submitting your request...';
 
-    const recaptchaResponse = grecaptcha.getResponse();
-
-    if (!recaptchaResponse) {
-      formMessage.textContent = "⚠️ Please verify that you’re not a robot.";
-      formMessage.className = "form-message error";
-      return;
-    }
-
-    const formData = new FormData(this);
-    formData.append("g-recaptcha-response", recaptchaResponse);
-
-    try {
-      const response = await fetch(this.action, {
-        method: "POST",
-        body: formData,
-        headers: { Accept: "application/json" },
-      });
-
-      if (response.ok) {
-        formMessage.textContent = "✅ Thank you! Your message has been sent successfully.";
-        formMessage.className = "form-message success";
-        contactForm.reset();
-        grecaptcha.reset();
-      } else {
-        formMessage.textContent = "⚠️ Oops! Something went wrong. Please try again.";
-        formMessage.className = "form-message error";
-      }
-    } catch (error) {
-      formMessage.textContent = "⚠️ Network error. Please try again later.";
-      formMessage.className = "form-message error";
-    }
-
-    setTimeout(() => {
-      formMessage.className = "form-message";
-      formMessage.textContent = "";
-    }, 4000);
+  const response = await fetch(form.action, {
+    method: 'POST',
+    body: new FormData(form),
+    headers: { 'Accept': 'application/json' }
   });
-}
 
-if (response.ok) {
-  window.location.href = "thankyou.html"; // redirect to thank you page
-} else {
-  formMessage.textContent = "⚠️ Oops! Something went wrong. Please try again.";
-  formMessage.className = "form-message error";
-}
+  if (response.ok) {
+    formMessage.textContent = 'Thank you! Your message has been sent successfully.';
+    form.reset();
+  } else {
+    formMessage.textContent = 'Oops! Something went wrong. Please try again.';
+  }
 
+  submitButton.disabled = false;
+});
 // Testimonial Slider
 let currentSlide = 0;
 const slides = document.querySelectorAll(".testimonial-card");
