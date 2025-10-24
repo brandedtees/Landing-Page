@@ -290,7 +290,7 @@
         <h4>₹999 <span>/ per T-shirt</span></h4>
         <ul>
           <li>✅ 5-day delivery</li>
-          <li>✅ Thread embroidery (up to 5 colors)</li>
+          <li>✅ Thread embroidery</li>
           <li>✅ Logo digitization included</li>
           <li>✅ Minimum order: 10</li>
         </ul>
@@ -357,28 +357,88 @@
       Trusted by teams, startups, and communities who believe in quality.
     </p>
 
-    <div class="testimonials-grid">
-      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="150">
-        <p>“Branded Tees delivered exactly what our startup needed — premium T-shirts with embroidery that made our team stand out. Great quality and quick delivery!”</p>
-        <h4>— Aishwarya Menon</h4>
-        <span>Operations Manager, TechVerse</span>
+    <div class="testimonials-carousel-wrapper">
+      
+      <!-- Previous Button -->
+      <button class="testimonial-prev" type="button">
+        &#8249;
+      </button>
+
+      <!-- Testimonials Carousel -->
+      <div class="testimonials-carousel">
+        
+        <!-- Testimonial Card 1 -->
+        <div class="testimonial-slide active">
+          <div class="quote-icon">"</div>
+          <div class="stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <p class="testimonial-text">
+            "Branded Tees delivered exactly what our startup needed — premium T-shirts with embroidery that made our team stand out. Great quality and quick delivery!"
+          </p>
+          <div class="client-info">
+            <img src="https://i.pravatar.cc/150?img=5" alt="Aishwarya Menon" class="client-avatar">
+            <div class="client-details">
+              <h4>Aishwarya Menon</h4>
+              <span>Operations Manager, TechVerse</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial Card 2 -->
+        <div class="testimonial-slide">
+          <div class="quote-icon">"</div>
+          <div class="stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <p class="testimonial-text">
+            "Our corporate event tees came out fantastic! The material and print finish were top-notch. We'll definitely collaborate again for our upcoming campaigns."
+          </p>
+          <div class="client-info">
+            <img src="https://i.pravatar.cc/150?img=12" alt="Rahul Sharma" class="client-avatar">
+            <div class="client-details">
+              <h4>Rahul Sharma</h4>
+              <span>HR Lead, Innovate Corp</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial Card 3 -->
+        <div class="testimonial-slide">
+          <div class="quote-icon">"</div>
+          <div class="stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <p class="testimonial-text">
+            "Branded Tees team was super professional from design to dispatch. They handled our community order with care and kept us updated throughout."
+          </p>
+          <div class="client-info">
+            <img src="https://i.pravatar.cc/150?img=9" alt="Kavita R." class="client-avatar">
+            <div class="client-details">
+              <h4>Kavita R.</h4>
+              <span>Founder, Chennai Creators Club</span>
+            </div>
+          </div>
+        </div>
+
       </div>
 
-      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="250">
-        <p>“Our corporate event tees came out fantastic! The material and print finish were top-notch. We’ll definitely collaborate again for our upcoming campaigns.”</p>
-        <h4>— Rahul Sharma</h4>
-        <span>HR Lead, Innovate Corp</span>
-      </div>
+      <!-- Next Button -->
+      <button class="testimonial-next" type="button">
+        &#8250;
+      </button>
 
-      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="350">
-        <p>“Branded Tees team was super professional from design to dispatch. They handled our community order with care and kept us updated throughout.”</p>
-        <h4>— Kavita R.</h4>
-        <span>Founder, Chennai Creators Club</span>
-      </div>
     </div>
+
+    <!-- Carousel Dots -->
+    <div class="testimonial-dots">
+      <span class="testimonial-dot active" data-index="0"></span>
+      <span class="testimonial-dot" data-index="1"></span>
+      <span class="testimonial-dot" data-index="2"></span>
+    </div>
+
   </div>
 </section>
-
 
 
 <!-- Contact / Get a Quote Section -->
@@ -388,24 +448,27 @@
     <!-- Left Column: Contact Form -->
     <div class="contact-form" data-aos="fade-right">
       <h2>Get a Quote</h2>
-      <p>Let’s bring your custom apparel ideas to life! Fill in your details and our team will get in touch shortly.</p>
+      <p>Let's bring your custom apparel ideas to life! Fill in your details and our team will get in touch shortly.</p>
 
-    <form id="contact-form" action="https://formspree.io/f/xgvnrroy" method="POST">
-  <div class="form-group">
-    <input type="text" name="name" placeholder="Your Name" required>
-  </div>
-  <div class="form-group">
-    <input type="email" name="email" placeholder="Your Email" required>
-  </div>
-  <div class="form-group">
-    <input type="text" name="phone" placeholder="Phone Number" required>
-  </div>
-  <div class="form-group">
-    <textarea name="message" rows="4" placeholder="Your Requirements (e.g. Quantity, Design Type, Deadline)" required></textarea>
-  </div>
-  <button id="submitButton" type="submit" class="btn-primary">Submit Request</button>
-</form>
-<div id="formMessage" class="form-message"></div>
+      <form id="contact-form" action="https://formspree.io/f/xgvnrroy" method="POST">
+        <div class="form-group">
+          <input type="text" name="name" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+          <input type="text" name="phone" placeholder="Phone Number" required>
+        </div>
+        <div class="form-group">
+          <textarea name="message" rows="4" placeholder="Your Requirements (e.g. Quantity, Design Type, Deadline)" required></textarea>
+        </div>
+        <button id="submitButton" type="submit" class="btn-primary">Submit Request</button>
+      </form>
+      
+      <div id="formMessage" class="form-message"></div>
+    </div>
+    <!-- END Left Column -->
       
     <!-- Right Column: Image & CTA -->
     <div class="contact-visual" data-aos="fade-left">
@@ -415,9 +478,11 @@
         <p>Bulk printing, embroidery & personalized apparel — we handle it all!</p>
       </div>
     </div>
+    <!-- END Right Column -->
 
   </div>
 </section>
+
 
 <!-- Success Message (Hidden by Default) -->
     <div id="formMessage" class="form-message"></div>
@@ -509,5 +574,3 @@
 
 </body>
 </html>
-
-
